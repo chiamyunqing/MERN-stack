@@ -13,7 +13,6 @@ exports.getUsers = function (req, res) {
 }
 
 exports.addUser = async function (req, res) {
-    console.log("reached add user");
     const user = req.body;
     const newUser = new UserModel(user);
     await newUser.save();
